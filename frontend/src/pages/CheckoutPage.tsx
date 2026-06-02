@@ -40,7 +40,6 @@ export function CheckoutPage() {
       })),
     }
 
-    void createOrder
     setStatusMessage(`TODO: submit order for ${draftRequest.customerEmail}`)
   }
 

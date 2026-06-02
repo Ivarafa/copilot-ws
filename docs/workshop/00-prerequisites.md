@@ -34,6 +34,32 @@ If it shows an error, sign in via *GitHub Copilot: Sign In* from the command pal
 
 ---
 
+## Set up a GitHub Personal Access Token
+
+Part 4 of the workshop uses the GitHub MCP server to create issues and search code directly from Copilot Chat. It needs a token to authenticate.
+
+**Create the token:**
+
+1. Go to **https://github.com/settings/tokens/new**
+2. Give it a name, e.g. `copilot-workshop`
+3. Set expiration to **7 days** (or however long you need)
+4. Under *Scopes*, tick **`repo`**
+5. Click **Generate token** and copy it — you won't see it again
+
+**Set it as an environment variable:**
+
+```bash
+# macOS / Linux — add to your shell session
+export GITHUB_TOKEN=ghp_your_token_here
+
+# Windows (PowerShell)
+$env:GITHUB_TOKEN = "ghp_your_token_here"
+```
+
+> Start your terminal *after* setting the variable, or VS Code won't pick it up.
+
+---
+
 ## Clone and set up the repo
 
 ```bash
