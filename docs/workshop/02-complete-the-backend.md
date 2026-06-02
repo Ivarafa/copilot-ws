@@ -78,6 +78,8 @@ Map the request items to the service, return 201 Created.
 
 Review what Copilot generates — it may also suggest completing `OrderService.kt`. Accept the changes.
 
+> **Import note:** `CreateOrderItemCommand` is defined in `OrderService.kt`, so it needs to be imported in `OrderController.kt`. If you see a red squiggle on that type, use `/fix` or accept the import Copilot adds automatically.
+
 ---
 
 ## Step 5 — Complete OrderService

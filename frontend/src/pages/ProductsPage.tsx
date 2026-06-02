@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Cart } from '../components/Cart'
 import { ProductCard } from '../components/ProductCard'
@@ -6,11 +6,22 @@ import { fetchProducts } from '../services/api'
 import type { CartItem, Product } from '../types'
 
 export function ProductsPage() {
+  const CART_STORAGE_KEY = 'webshop-cart'
   const navigate = useNavigate()
   const [products] = useState<Product[]>([])
   const [cartItems, setCartItems] = useState<CartItem[]>([])
   const [loading] = useState<boolean>(false)
   const [error] = useState<string | null>(null)
+
+  useEffect(() => {
+    try {
+      window.localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(cartItems))
+    } catch {
+      // ignore localStorage write errors (e.g. quota exceeded, disabled)
+    }
+
+    window.dispatchEvent(new Event('cart-updated'))
+  }, [cartItems])
 
   const handleAddToCart = (product: Product) => {
     setCartItems((currentItems) => {

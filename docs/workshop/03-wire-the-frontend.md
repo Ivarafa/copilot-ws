@@ -80,6 +80,8 @@ Copilot should generate the `useEffect` referencing the existing state variables
 
 > 💡 Tip: If TypeScript complains about `const [products]` missing a setter, Copilot's `/fix` will add `setProducts` automatically.
 
+> 🧹 Cleanup: Once the `useEffect` is in place, delete the `void fetchProducts` line — it was just a placeholder hint and does nothing. Chat will usually remove it, but inline completion won't.
+
 ---
 
 ## Step 4 — Implement `Cart.tsx`
