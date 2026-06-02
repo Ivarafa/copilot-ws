@@ -46,24 +46,51 @@ Part 4 of the workshop uses the GitHub MCP server to create issues and search co
 4. Under *Scopes*, tick **`repo`**
 5. Click **Generate token** and copy it — you won't see it again
 
-**Set it as an environment variable:**
+**Set it as a permanent environment variable (macOS/Linux):**
+
+Open `~/.zshrc` in a text editor and add this line at the bottom:
 
 ```bash
-# macOS / Linux — add to your shell session
-export GITHUB_TOKEN=ghp_your_token_here
-
-# Windows (PowerShell)
-$env:GITHUB_TOKEN = "ghp_your_token_here"
+export GITHUB_PERSONAL_ACCESS_TOKEN=ghp_your_token_here
 ```
 
-> Start your terminal *after* setting the variable, or VS Code won't pick it up.
+Then reload your shell:
+
+```bash
+source ~/.zshrc
+```
+
+> VS Code reads environment variables from your shell profile on startup — after sourcing, open a new terminal in VS Code or restart it.
+
+**Windows (PowerShell):**
+
+```powershell
+$env:GITHUB_PERSONAL_ACCESS_TOKEN = "ghp_your_token_here"
+```
 
 ---
 
-## Clone and set up the repo
+## Fork and clone the repo
+
+### 1. Fork the repo
+
+Go to **https://github.com/Ivarafa/copilot-ws** and click **Fork** (top-right corner). This creates your own copy where you can push changes and create issues.
+
+### 2. Enable Issues on your fork
+
+Issues are disabled on forks by default. To turn them on:
+
+1. Go to your fork on GitHub (e.g. `github.com/your-username/copilot-ws`)
+2. Click **Settings**
+3. Scroll down to the **Features** section
+4. Check the **Issues** checkbox
+
+You'll need this in Part 4 when Copilot creates issues on your behalf.
+
+### 3. Clone your fork
 
 ```bash
-git clone https://github.com/Ivarafa/copilot-ws.git
+git clone https://github.com/your-username/copilot-ws.git
 cd copilot-ws
 ```
 
