@@ -1,9 +1,23 @@
 # 03 — Wire the Frontend
 
 **Time:** ~20 minutes  
-**Feature:** Inline completions, chat, `/fix`, component generation
+**Feature:** Inline completions, chat, `/fix`, component generation, `frontend-engineer` skill
 
 This is the main frontend task. You'll use Copilot to bring the stub components to life and connect them to the backend API.
+
+---
+
+## 🛠️ Activate the frontend-engineer skill
+
+The **`frontend-engineer`** skill loads React, TypeScript, Tailwind, and API service conventions automatically — but you can also invoke it explicitly. In Copilot Chat, try:
+
+```
+Use the frontend-engineer skill to help me implement ProductCard.tsx
+```
+
+Or just start asking about components, hooks, TypeScript types, or Tailwind — and the skill will kick in on its own.
+
+> 💡 The skill knows the component structure, the `async`/`await` API pattern, the exact type interfaces, and naming conventions for this project — so Copilot suggestions will fit the codebase right away.
 
 ---
 

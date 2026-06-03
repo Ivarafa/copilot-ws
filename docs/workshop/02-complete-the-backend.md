@@ -1,9 +1,23 @@
 # 02 — Complete the Backend
 
 **Time:** ~20 minutes  
-**Feature:** Inline completions, `/explain`, `/fix`, `@workspace`
+**Feature:** Inline completions, `/explain`, `/fix`, `@workspace`, `backend-engineer` skill
 
 > Don't worry if you haven't written Kotlin before — Copilot has you covered. This part shows how Copilot bridges language and framework gaps.
+
+---
+
+## 🛠️ Activate the backend-engineer skill
+
+The **`backend-engineer`** skill loads deeper Kotlin, Spring Boot, and JPA conventions automatically — but you can also invoke it explicitly. In Copilot Chat, try:
+
+```
+Use the backend-engineer skill to explain how the service layer works in this project.
+```
+
+Or just start asking about controllers, services, repositories, or Kotlin — and the skill will kick in on its own.
+
+> 💡 The skill knows the exact class names, layering rules, and REST patterns for this project. It gives Copilot precise context without you having to re-explain the stack each time.
 
 ---
 
