@@ -8,7 +8,7 @@
 
 | Tool | Version | Download |
 |------|---------|----------|
-| Node.js | 20+ | https://nodejs.org |
+| Node.js | 24 (latest LTS) | https://nodejs.org |
 | JDK | 25 (latest LTS) | https://adoptium.net |
 | Gradle | 9.7.1 (latest) | https://gradle.org/install |
 | VS Code **or** IntelliJ IDEA | Latest | See below |
@@ -18,7 +18,7 @@
 
 Each section below has a **Windows** and a **macOS** tab. Follow the one that matches your machine.
 
-### 1. Node.js 20+
+### 1. Node.js 24 (latest LTS)
 
 **Windows**
 ```powershell
@@ -28,14 +28,14 @@ Or download the installer from https://nodejs.org and run it.
 
 **macOS**
 ```bash
-brew install node@20
-brew link --overwrite node@20
+brew install node@24
+brew link --overwrite node@24
 ```
 Or download the installer from https://nodejs.org.
 
 Verify with:
 ```bash
-node -v   # should print v20.x or higher
+node -v   # should print v24.x or higher
 npm -v
 ```
 
@@ -180,7 +180,7 @@ cd backend
 | `'gradle' is not recognized` / `'java' is not recognized` | Tool not installed or not on `PATH` | Reinstall via the steps above and open a **new** terminal window |
 | `./gradlew` fails immediately with no useful error | Wrapper files missing/corrupted (`gradle/wrapper/gradle-wrapper.jar`) | Run `gradle wrapper --gradle-version 9.7.1` from `backend/` with Gradle installed globally, then commit the regenerated files |
 | Build fails with a Java version error (e.g. "Unsupported class file major version") | Wrong `JAVA_HOME` or multiple JDKs installed | Confirm `java -version` reports 25, and that `JAVA_HOME` points to the JDK 25 install |
-| `npm install` fails with engine warnings | Node.js version too old | Confirm `node -v` reports 20 or higher |
+| `npm install` fails with engine warnings | Node.js version too old | Confirm `node -v` reports 24 or higher |
 | Port `5173` or `8080` already in use | Another process is using the port | Stop the other process, or change the port in `vite.config.ts` / `application.yml` |
 
 ---
